@@ -36,9 +36,12 @@ Design and implement a responsive web interface for the Challenge Listing &amp; 
 
 ## Solution
 
+Scaffolding done using Vite build tool.
+
 ### Technologies Used
 
 - React
+- React Router
 - Tailwind CSS
 - Motion
 
