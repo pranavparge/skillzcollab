@@ -12,18 +12,26 @@ Design and implement a responsive web interface for the Challenge Listing &amp; 
 
 - Clone the repository
 
-  `git clone https://github.com/pranavparge/skillzcollab.git`
+  ```bash
+  git clone https://github.com/pranavparge/skillzcollab.git
+  ```
 
 - Navigate to project directory
 
-  `cd skillzcollab`
+  ```bash
+  cd skillzcollab
+  ```
 
 - Install dependencies
 
-  `npm install`
+  ```bash
+  npm install
+  ```
 
 - Start development server
 
-  `npm run dev`
+  ```bash
+  npm run dev
+  ```
 
 ## Solution
