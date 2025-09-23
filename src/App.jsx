@@ -1,5 +1,7 @@
+import ChallengeListing from "./pages/ChallengeListing";
+
 function App() {
-  return <h1>SkillzCollab</h1>;
+  return <ChallengeListing />;
 }
 
 export default App;
