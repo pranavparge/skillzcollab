@@ -44,5 +44,6 @@ Scaffolding done using Vite build tool.
 - React Router
 - Tailwind CSS
 - Motion
+- Lucide React
 
 ### Design Decision
