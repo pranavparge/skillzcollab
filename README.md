@@ -35,3 +35,11 @@ Design and implement a responsive web interface for the Challenge Listing &amp; 
   ```
 
 ## Solution
+
+### Technologies Used
+
+- React
+- Tailwind CSS
+- Motion
+
+### Design Decision
