@@ -155,7 +155,7 @@ function ChallengeDetails() {
 
                 <motion.button
                   onClick={handleSubmitEntry}
-                  className="w-full bg-[#4e0f74] text-white font-medium py-3 px-4 rounded-lg"
+                  className="w-full bg-[#4e0f74] text-white font-medium py-3 px-4 rounded-lg cursor-pointer"
                   whileHover={{
                     scale: 1.05,
                   }}
