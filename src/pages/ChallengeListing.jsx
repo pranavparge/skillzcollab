@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, Search } from "lucide-react";
 
-import Card from "../components/card";
+import Card from "../components/Card";
 
 const creativeChallenges = [
   {
