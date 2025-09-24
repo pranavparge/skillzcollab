@@ -5,7 +5,7 @@ import ChallengeDetails from "./pages/ChallengeDetails";
 function App() {
   return (
     <BrowserRouter>
-      <h1 className="mb-6 font-extrabold text-5xl text-[#4e0f74]">
+      <h1 className="mb-6 text-5xl text-[#4e0f74] font-extrabold">
         SKILLZCOLLAB
       </h1>
 

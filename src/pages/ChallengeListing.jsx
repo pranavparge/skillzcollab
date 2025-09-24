@@ -346,8 +346,8 @@ const creativeChallenges = [
 function ChallengeListing() {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedDeadline, setSelectedDeadline] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [selectedDeadline, setSelectedDeadline] = useState("All Deadlines");
 
   const categories = [
     "All Categories",
@@ -373,18 +373,19 @@ function ChallengeListing() {
         challenge.name.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesCategory =
-        selectedCategory === "All" || challenge.category === selectedCategory;
+        selectedCategory === "All Categories" ||
+        challenge.category === selectedCategory;
 
       const matchesDeadline =
-        selectedDeadline === "All" ||
+        selectedDeadline === "All Deadlines" ||
         getDeadlineStatus(challenge.deadline) === selectedDeadline;
 
       return matchesSearch && matchesCategory && matchesDeadline;
     });
   }, [searchTerm, selectedCategory, selectedDeadline]);
 
-  const handleDetailsClick = () => {
-    navigate("/details");
+  const handleDetailsClick = (challenge) => {
+    navigate("/details", { state: { challenge } });
   };
 
   return (
@@ -429,7 +430,7 @@ function ChallengeListing() {
               onChange={(e) => setSelectedDeadline(e.target.value)}
               className="pl-3 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white w-full"
             >
-              <option value="All">All Deadlines</option>
+              <option value="All Deadlines">All Deadlines</option>
               <option value="Upcoming">Upcoming</option>
               <option value="Ongoing">Ongoing</option>
               <option value="Past">Past</option>
@@ -443,7 +444,11 @@ function ChallengeListing() {
 
       {/* Cards */}
       {filteredChallenges.map((challenge) => (
-        <Card key={challenge.id} {...challenge} onClick={handleDetailsClick} />
+        <Card
+          key={challenge.id}
+          {...challenge}
+          onClick={() => handleDetailsClick(challenge)}
+        />
       ))}
     </>
   );

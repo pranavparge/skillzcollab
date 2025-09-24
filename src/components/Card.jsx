@@ -1,5 +1,7 @@
-import { Calendar, Euro } from "lucide-react";
 import { motion } from "motion/react";
+import { Calendar, Euro } from "lucide-react";
+
+import { formatDeadline, formatReward } from "../utils";
 
 const Card = ({
   name,
@@ -10,27 +12,6 @@ const Card = ({
   reward,
   onClick,
 }) => {
-  const formatDeadline = (date) => {
-    if (!date) return "No deadline";
-    const dateObj = new Date(date);
-    return dateObj.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
-
-  const formatReward = (reward) => {
-    if (!reward) return "No reward specified";
-
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "EUR",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(reward);
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -88,12 +69,12 @@ const Card = ({
       >
         <div className="flex items-center space-x-2">
           <Calendar className="text-gray-500" />
-          <span className="text-sm text-gray-500">
+          <span className="text-md text-gray-500">
             {formatDeadline(deadline)}
           </span>
         </div>
 
-        <span className="text-sm text-gray-500">{formatReward(reward)}</span>
+        <span className="text-md text-gray-500">{formatReward(reward)}</span>
       </motion.div>
     </motion.div>
   );
