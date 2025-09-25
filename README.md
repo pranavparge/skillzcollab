@@ -46,9 +46,7 @@ Scaffolding done using Vite build tool.
 - Motion
 - Lucide React
 
-### Design Decision
-
-## Design Decisions Summary
+### Design Decision Summary
 
 Appliation is built using React and following the best practices with a focus on clean code and resuability.
 Used the following approach during the development:
